@@ -13,24 +13,24 @@ import java.util.HashMap;
 
 public class StrippingTemplateGenerator {
 
-    public static JsonObject generateTemplate( HashMap< Block, Block > map ) {
+    public static JsonObject generateTemplate(HashMap<Block, Block> map) {
         JsonObject object = new JsonObject();
-        for( Block base : map.keySet() ) {
-            Block result = map.get( base );
-            Identifier b = Registry.BLOCK.getId( base );
-            Identifier r = Registry.BLOCK.getId( result );
-            object.addProperty( b.toString(), r.toString() );
+        for (Block base : map.keySet()) {
+            Block result = map.get(base);
+            Identifier b = Registry.BLOCK.getId(base);
+            Identifier r = Registry.BLOCK.getId(result);
+            object.addProperty(b.toString(), r.toString());
         }
         return object;
     }
 
-    public static void saveTemplate( JsonObject template, String templateName ) {
+    public static void saveTemplate(JsonObject template, String templateName) {
         try {
-            FileWriter writer = new FileWriter( DirectoryHandler.appendToPath( Custre.STRIPPING_TEMPLATE_DIRECTORY, templateName + ".json" ).toString() );
-            writer.write( template.toString() );
+            FileWriter writer = new FileWriter(DirectoryHandler.appendToPath(Custre.STRIPPING_TEMPLATE_DIRECTORY, templateName + ".json").toString());
+            writer.write(template.toString());
             writer.flush();
             writer.close();
-        } catch ( IOException e ) {
+        } catch (IOException e) {
 
         }
     }
