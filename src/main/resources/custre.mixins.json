@@ -1,14 +1,10 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.cebbys.custre.mixins",
+  "package": "lv.cebbys.custre.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "StrippingRecipeAccessor"
-  ],
-  "client": [
-  ],
-  "server": [
   ],
   "injectors": {
     "defaultRequire": 1

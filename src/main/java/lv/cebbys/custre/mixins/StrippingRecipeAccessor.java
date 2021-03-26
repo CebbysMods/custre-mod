@@ -1,20 +1,24 @@
-package com.cebbys.custre.mixins;
+package lv.cebbys.custre.mixins;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.AxeItem;
+import java.util.Map;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
-import java.util.Map;
+import net.minecraft.block.Block;
+import net.minecraft.item.AxeItem;
 
 @Mixin(AxeItem.class)
 public interface StrippingRecipeAccessor {
-
     @Accessor("STRIPPED_BLOCKS")
     @Mutable
-    public static void setStrippingBlocks(Map<Block, Block> map) {
+    public static void setStrippingRecipes(Map<Block, Block> map) {
         throw new AssertionError();
     }
 
+    @Accessor("STRIPPED_BLOCKS")
+    public static Map<Block, Block> getStrippingRecipes() {
+        throw new AssertionError();
+    }
 }

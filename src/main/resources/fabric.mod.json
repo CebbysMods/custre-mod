@@ -1,32 +1,32 @@
 {
   "schemaVersion": 1,
   "id": "custre",
-  "version": "0.0.1",
-  "name": "Custre - Custom Stripping Recipes ",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "version": "${version}",
+  "name": "Custom Stripping Recipes",
+  "description": "A dynamic, data-driven approach to stripping. Woohoo!",
   "authors": [
     "CebbyS"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/CebbysMods",
+    "sources": "https://github.com/CebbysMods/custre-mod"
   },
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/custre/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.cebbys.custre.Custre"
+      "lv.cebbys.custre.Custre"
     ]
   },
   "mixins": [
-    "mixins.json"
+    "custre.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "minecraft": "1.16.x",
-    "celib": ">=0.0.1"
+    "celib": "*"
   },
   "suggests": {
     "flamingo": "*"
