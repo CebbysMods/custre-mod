@@ -24,6 +24,7 @@ repositories {
     }
 }
 ```
+Only versions above 2.0.0 are available
 ```groovy
 dependencies {
     // Example include with version template
