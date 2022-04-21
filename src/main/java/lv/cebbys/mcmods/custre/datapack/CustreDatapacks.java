@@ -1,7 +1,6 @@
 package lv.cebbys.mcmods.custre.datapack;
 
 import com.mojang.bridge.game.PackType;
-import lv.cebbys.mcmods.custre.Custre;
 import lv.cebbys.mcmods.respro.api.ResproRegistry;
 import lv.cebbys.mcmods.respro.imp.builders.datapack.DataPackBuilder;
 import lv.cebbys.mcmods.respro.imp.resource.recipe.CustreRecipeResource;

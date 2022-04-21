@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "lv.cebbys.mcmods.custre.Custre"
+    ],
+    "client": [
+      "lv.cebbys.mcmods.custre.Custre"
     ]
   },
   "mixins": [

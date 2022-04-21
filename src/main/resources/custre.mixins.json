@@ -4,6 +4,7 @@
   "package": "lv.cebbys.mcmods.custre.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "PlayerJoinServerMixin",
     "StrippingRecipeAccessor"
   ],
   "injectors": {
