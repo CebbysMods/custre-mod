@@ -27,7 +27,7 @@ class CustreResourceReloadListener implements SimpleSynchronousResourceReloadLis
 
     @Override
     public Identifier getFabricId() {
-        return new Identifier(Custre.MODID, "recipes");
+        return new Identifier(Custre.MODID, "custre_recipes");
     }
 
     @Override
