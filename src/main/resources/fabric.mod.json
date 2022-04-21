@@ -8,6 +8,7 @@
     "CebbyS"
   ],
   "contact": {
+    "curseforge": "https://www.curseforge.com/minecraft/mc-mods/custre",
     "homepage": "https://github.com/CebbysMods",
     "sources": "https://github.com/CebbysMods/custre-mod"
   },
@@ -23,12 +24,9 @@
     "custre.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.13.0",
     "fabric": "*",
     "minecraft": "1.18.x",
-    "celib": "*"
-  },
-  "suggests": {
-    "flamingo": "*"
+    "respro": ">=0.1.1"
   }
 }
