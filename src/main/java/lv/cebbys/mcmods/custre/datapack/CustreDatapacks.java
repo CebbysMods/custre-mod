@@ -12,6 +12,7 @@ import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static lv.cebbys.mcmods.custre.Custre.MODID;
 import static net.minecraft.block.Blocks.ACACIA_LOG;
 import static net.minecraft.block.Blocks.ACACIA_WOOD;
 import static net.minecraft.block.Blocks.BIRCH_LOG;
@@ -54,11 +55,11 @@ public class CustreDatapacks {
 
     private static void registerMinecraftCustrePack() {
         logger.info("Registering Minecraft stripping recipes");
-        Identifier id = new Identifier("custre", "minecraft");
+        Identifier id = new Identifier(MODID, "minecraft");
         ResproRegistry.registerDataPack(id, data -> {
             data.addPackName("Custre: Minecraft");
 
-            data.addPackIcon(new Identifier(Custre.MODID, "textures/icons/minecraft.png"));
+            data.addPackIcon(new Identifier(MODID, "textures/icons/minecraft.png"));
 
             data.addPackMeta(meta -> {
                 meta.packFormat(SharedConstants.getGameVersion().getPackVersion(PackType.DATA));

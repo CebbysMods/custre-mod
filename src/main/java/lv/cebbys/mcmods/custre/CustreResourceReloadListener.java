@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static lv.cebbys.mcmods.custre.Custre.MODID;
+
 class CustreResourceReloadListener implements SimpleSynchronousResourceReloadListener {
 
     private static final Logger logger = LoggerFactory.getLogger(CustreResourceReloadListener.class);
@@ -27,13 +29,13 @@ class CustreResourceReloadListener implements SimpleSynchronousResourceReloadLis
 
     @Override
     public Identifier getFabricId() {
-        return new Identifier(Custre.MODID, "custre_recipes");
+        return new Identifier(MODID, MODID + "_recipes");
     }
 
     @Override
     public void reload(ResourceManager manager) {
         clearRecipeList();
-        for (Identifier id : manager.findResources("custre", path -> path.endsWith(".json"))) {
+        for (Identifier id : manager.findResources(MODID, path -> path.endsWith(".json"))) {
             try (InputStream stream = manager.getResource(id).getInputStream()) {
                 JsonObject data = JsonParser.parseReader(new InputStreamReader(stream)).getAsJsonObject();
                 Pair<PillarBlock, PillarBlock> recipe = parseStrippingRecipe(data);
