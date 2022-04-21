@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "lv.cebbys.custre.Custre"
+      "lv.cebbys.mcmods.custre.Custre"
     ]
   },
   "mixins": [
@@ -25,7 +25,7 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x",
+    "minecraft": "1.18.x",
     "celib": "*"
   },
   "suggests": {
