@@ -35,7 +35,7 @@ class CustreResourceReloadListener implements SimpleSynchronousResourceReloadLis
     @Override
     public void reload(ResourceManager manager) {
         clearRecipeList();
-        for (Identifier id : manager.findResources(MODID, path -> path.endsWith(".json"))) {
+        for (Identifier id : manager.findResources("recipes/" + MODID, path -> path.endsWith(".json"))) {
             try (InputStream stream = manager.getResource(id).getInputStream()) {
                 JsonObject data = JsonParser.parseReader(new InputStreamReader(stream)).getAsJsonObject();
                 Pair<PillarBlock, PillarBlock> recipe = parseStrippingRecipe(data);
